@@ -1,0 +1,547 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  height: 100vh;
+  color: white;
+  padding: 10px;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  position: relative;
+}
+
+header .Navbar {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  width: 80%; /* Changed from fixed 500px */
+  max-width: 500px; /* Keeps design limit on larger screens */
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  padding: 15px;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+header .Navbar .beforeIcon {
+  background-color: transparent;
+
+  display: flex;
+
+  color: black;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+header .Navbar .beforeIcon .logo h4 {
+  margin: 5px;
+
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.Navbar .beforeIcon nav a {
+  color: black;
+  margin: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.Navbar .beforeIcon nav i {
+  font-size: 20px;
+  display: none;
+  cursor: pointer;
+}
+.Navbar .beforeIcon div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+header .Navbar .afterIcon {
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.3s ease;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 0px; /* will add this in `.show` */
+  justify-content: center;
+}
+
+header .Navbar .afterIcon.show {
+  max-height: 200px; /* Adjust to fit your content */
+  padding-top: 10px;
+}
+header .Navbar .afterIcon div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+}
+header .Navbar .afterIcon div:hover,
+header .Navbar .afterIcon div:active {
+  background-color: rgb(236, 234, 234);
+}
+header .Navbar .afterIcon div a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+}
+header .Navbar .afterIcon div i {
+  color: black;
+  cursor: pointer;
+  font-size: 15px;
+}
+/* main{border: 20px solid goldenrod;} */
+main .hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+main .hero .heroContent {
+  margin-top: 60px;
+  height: 100%;
+  width: 100%;
+
+  padding: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main .hero .Response {
+font-size: 25px;
+  width: auto;
+  height: auto;
+  
+  font-weight: bold;
+}
+main .hero .heroContent h1 {
+  color: aqua;
+  text-shadow: 20px 20px 200px rgb(30, 235, 235);
+  font-size: 100px;
+  font-family: "Tektur", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400px;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+main .hero .heroContent h2 {
+  color: rgb(223, 222, 222);
+  opacity: 0.6;
+}
+main .hero .heroContent .email input {
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+}
+main .hero .heroContent .email {
+  border: none;
+  background-color: white;
+  border-radius: 10px;
+  width: auto;
+  max-width: 400px;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+main .hero .heroContent .email button {
+  padding: 15px;
+  border: none;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+main .hero .heroContent .email button:hover,
+main .hero .password button:hover,
+footer .Container .Contact .msg div button:hover {
+  box-shadow: 10px 10px 10px rgb(3, 3, 211) inset;
+}
+main .hero .password {
+  padding: 10px;
+  width: 300px;
+}
+main .hero .password h3 {
+  color: aqua;
+  margin: 2px;
+}
+main .hero .password input {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  outline: none;
+  margin: 5px;
+  max-width: 100%;
+  width: auto;
+}
+main .hero .password button {
+  background-color: blue;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+main .hero .breaches {
+  color: white;
+  width: 100%;
+  padding: 20px;
+}
+main .hero .breaches > h1 {
+  color: gold;
+  font-family: "Tektur", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400px;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  border-bottom: 0.2px solid aqua;
+  font-size: 35px;
+}
+main .hero .breaches .breach {
+  margin: 5px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+main .hero .breaches .breach div > div {
+  width: 100%;
+  border: 2px solid aqua;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 20px;
+}
+main .hero .breaches .breach > div {
+  margin: 10px;
+  width: 100%;
+}
+footer {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+footer .Container {
+  border: 0.1px solid rgb(212, 233, 247);
+  width: 100%;
+  height: 75%;
+  display: flex;
+}
+footer .Container .Contact {
+  border-right: 0.1px solid rgb(212, 233, 247);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+footer .Container .Contact .connect {
+  width: 100%;
+
+  padding: 20px;
+}
+footer .Container .Contact .connect i {
+  font-size: 25px;
+  margin: 5px;
+  opacity: 0.6;
+  color: white;
+  scale: 1;
+  transition: all 0.2s ease-in;
+}
+footer .Container .Contact .connect a {
+  text-decoration: none;
+}
+footer .Container .Contact .connect i:hover {
+  opacity: 1;
+  scale: 1.1;
+}
+footer .Container .Contact .msg {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+footer .Container .Contact .msg h2 {
+  color: aqua;
+  font-family: "Tektur", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400px;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  margin: 5px;
+}
+footer .Container .Contact .msg div {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  width: 100%;
+
+  flex-wrap: wrap;
+}
+footer .Container .Contact .msg textarea {
+  font-weight: bold;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  outline: 2px solid rgb(231, 236, 236);
+  resize: none;
+  width: 80%;
+}
+footer .Container .Contact .msg input {
+  padding: 10px;
+  border-radius: 10px;
+  font-size: medium;
+  width: auto;
+}
+
+footer .Container .Contact .msg button {
+  padding: 10px;
+  background-color: blue;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+footer .Container .services {
+  padding: 10px;
+  width: 30%;
+  border: 0.2px solid rgb(212, 233, 247);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 13px;
+}
+footer .Container .services h1 {
+  color: aqua;
+  font-weight: bold;
+}
+footer .Container .services h2 {
+  font-size: 15px;
+  opacity: 0.6;
+  cursor: pointer;
+  margin: 5px;
+  transition: all 0.3s ease-in;
+  margin-left: 10px;
+}
+footer .Container .services h2:hover {
+  opacity: 1;
+  margin-left: 20px;
+  scale: 1.05;
+}
+
+footer .Copyright {
+  border: 0.1px solid rgb(212, 233, 247);
+
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+footer .Copyright h2 {
+  font-weight: bold;
+  opacity: 0.6;
+  font-size: 14px;
+  cursor: pointer;
+}
+footer .Copyright h2:hover {
+  opacity: 1;
+}
+
+@media (max-width: 1000px) {
+  main .hero .heroContent h1 {
+    font-size: 80px;
+  }
+  main .hero .heroContent h2 {
+    font-size: 20px;
+  }
+  main .hero .heroContent .email {
+    max-width: 350px;
+    width: auto;
+  }
+  main .hero .breaches > h1 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 900px) {
+  main .hero .heroContent h1 {
+    font-size: 60px;
+  }
+  main .hero .heroContent h2 {
+    font-size: 15px;
+  }
+  main .hero .heroContent .email {
+    max-width: 320px;
+    width: auto;
+  }
+  main .hero .heroContent .email button {
+    padding: 10px;
+  }
+  main .hero .breaches .breach div > div {
+    font-size: 12px;
+  }
+  .Navbar .beforeIcon nav i {
+    display: block;
+  }
+  .Navbar nav a {
+    display: none;
+  }
+  main .hero .breaches .breach {
+    padding: 10px;
+  }
+  main .hero .breaches .breach > div {
+    margin: 0;
+  }
+  footer .Container {
+    flex-wrap: wrap;
+  }
+  footer .Container .Contact {
+    width: 100%;
+  }
+  footer .Container .services {
+    width: 50%;
+    font-size: 10px;
+  }
+  footer .Container .Contact .connect i {
+    font-size: 25px;
+  }
+  footer .Container .Contact .connect > h1 {
+    font-size: 24px;
+  }
+  main .hero .breaches > h1 {
+    font-size: 30px;
+  }
+
+}
+@media (max-width: 600px) {
+  main .hero .heroContent h1 {
+    font-size: 35px;
+  }
+  main .hero .heroContent h2 {
+    font-size: 10px;
+  }
+  main .hero .heroContent .email {
+    max-width: 270px;
+    width: auto;
+  }
+  main .hero .heroContent .email input {
+    padding: 10px;
+  }
+  header .Navbar .beforeIcon div h4 {
+    display: none;
+  }
+  main .hero .heroContent .email button {
+    padding: 10px;
+  }
+  footer .Copyright h2 {
+    font-size: 12px;
+  }
+  footer .Container .Contact .msg input {
+    width: 80%;
+  }
+  footer .Container .Contact .msg h2 {
+    font-size: 20px;
+  }
+  footer .Container .Contact .connect i {
+    font-size: 20px;
+  }
+  footer .Container .Contact .connect > h1 {
+    font-size: 20px;
+  }
+  main .hero .breaches > h1 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 350px) {
+  main .hero .heroContent h1 {
+    font-size: 25px;
+  }
+  main .hero .heroContent h2 {
+    font-size: 7px;
+  }
+  main .hero .heroContent .email {
+    max-width: 220px;
+    width: auto;
+  }
+  main .hero .password {
+    width: 100%;
+  }
+  main .hero .breaches .breach {
+    padding: 0px;
+  }
+  /* main .hero .password input{
+    width: 100%;
+  } */
+  main .hero .breaches .breach > div {
+    width: fit-content;
+  }
+  main .hero .breaches .breach {
+    width: fit-content;
+  }
+  footer .Copyright h2 {
+    font-size: 10px;
+  }
+  footer .Container .services {
+    width: 100%;
+    font-size: auto;
+  }
+  footer .Container .services h1 {
+    font-size: 16px;
+  }
+  footer .Container .services h2 {
+    font-size: 10px;
+  }
+  footer .Container .Contact .msg h2 {
+    font-size: 16px;
+  }
+  footer .Container .Contact .connect i {
+    font-size: 16px;
+  }
+  footer .Container .Contact .connect > h1 {
+    font-size: 14px;
+  }
+  main .hero .breaches > h1 {
+    font-size: 20px;
+  }
+}

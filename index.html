@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HackAlert</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap");
+    </style>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="Navbar">
+        <div class="beforeIcon">
+          <div>
+            <img src="logo.png" height="30px" />
+            <h4>HackAlert</h4>
+          </div>
+          <nav>
+            <a href="">About Us</a>
+            <a href="">Contact Us</a>
+            <i class="fa-solid fa-bars menu-toggle"></i>
+          </nav>
+        </div>
+        <div class="afterIcon">
+          <div class="About" onclick="scrollToFooter()">
+            <a href="" >About Us</a>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="Contact" onclick="scrollToFooter()">
+            <a href="" >Contact Us</a>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div class="heroContent">
+          <h1>Is You Breached?</h1>
+          <h2>Check Is Your Email Breached or not</h2>
+          <div class="email">
+            <input type="email" placeholder="Email Address" class="emailInput"/>
+            <button class="CheckBreach">Check</button>
+          </div>
+          <div class="Response">
+            <h6 class="emailResult"></h6>
+          </div>
+          <div class="password">
+            <h3> Check is your Password Breached</h3>
+            <input type="text" placeholder="Your Password" class="passwordInput" />
+            <button class="CheckPassword">Check</button>
+          </div>
+           <div class="Response">
+            <h6 class="passResult"></h6>
+          </div>
+         
+           <div class="Response">
+            <h6 class="allResult"></h6>
+          </div>
+
+        <div class="breaches">
+          <h1>Most Recent breach</h1>
+          <div class="breach">
+            <div>
+              <div class="info">
+                <h3>Logo</h3>
+                <h4>Domain</h4>
+                <h5>Date</h5>
+                <h6>Person Affected</h6>
+              </div>
+              <div class="description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                magnam ratione minima voluptatibus id iusto architecto dolores
+                porro assumenda dicta, in sequi nulla sapiente qui
+                necessitatibus, blanditiis natus molestiae vitae?
+              </div>
+            </div>
+
+           
+           
+          </div>
+          <!-- .breach -->
+        </div>
+        <!-- .breaches -->
+      </div>
+      <!-- .hero -->
+    </main>
+
+    <footer>
+      <div class="Container">
+        <div class="Contact">
+          <div class="connect">
+            <h1>Connect with Us</h1>
+
+            <a href="" target="_blank">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="" target="_blank">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="" target="_blank">
+              <i class="fa-brands fa-discord"></i>
+            </a>
+            <a href="" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="" target="_blank">
+              <i class="fa-brands fa-reddit"></i>
+            </a>
+          </div>
+          <div class="msg">
+            <h2>Message</h2>
+<form action="https://formspree.io/f/xwpbgdev" method="post" id="msg">           
+  
+  <div>
+              
+              <input type="text" name="name" placeholder="Your Name" required/>
+                <input type="email" name="email" placeholder="Email Address" required/>
+              <textarea
+                name="message"
+                
+                cols="30"
+                rows="2"
+                placeholder="Your Message"
+              required></textarea>
+              <button type="submit">Send</button>
+            </div></form>
+          </div>
+        </div>
+
+        <div class="services">
+          <h1>Services</h1>
+          <div>
+            <h2>Email Search</h2>
+            <h2>Domain Search</h2>
+            <h2>Who's Been Pwned</h2>
+            <h2>Passwords</h2>
+            <h2>Notify Me</h2>
+            <h2>API</h2>
+            <h2>Pricing</h2>
+            <h2>Opt Out</h2>
+            <h2>Dashboard</h2>
+            <h2>Partners</h2>
+          </div>
+        </div>
+        <div class="services">
+          <h1>Information</h1>
+          <div>
+            <h2>Who, What & Why</h2>
+            <h2>FAQ</h2>
+            <h2>Who's Been Pwned</h2>
+            <h2>Passwords</h2>
+            <h2>Notify Me</h2>
+            <h2>API</h2>
+            <h2>Pricing</h2>
+            <h2>Opt Out</h2>
+            <h2>Dashboard</h2>
+            <h2>Partners</h2>
+          </div>
+        </div>
+      </div>
+      <div class="Copyright">
+        <h2>&COPY;2025 HackAlert. All Right reserved</h2>
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/dc72d70774.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-sha1/build/sha1.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
