@@ -30,7 +30,7 @@ header .Navbar {
   flex-direction: column;
   border-radius: 30px;
   padding: 15px;
-  z-index: 1;
+  z-index:999;
   box-sizing: border-box;
 }
 
@@ -113,7 +113,7 @@ marquee{
   position: absolute;
   top: 80px;
   color: aquamarine;
-  z-index: 999;
+  z-index: 998;
   background-color: grey;
   
   scroll-behavior: smooth;
