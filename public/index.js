@@ -166,16 +166,3 @@ async function loadRecentBreaches() {
 
 loadRecentBreaches();
 
-// =================== FORM RESET ===================
-const form = document.querySelector("#msg");
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const name = form.querySelector("[name='name']");
-  const email = form.querySelector("[name='email']");
-  const message = form.querySelector("[name='message']");
-
-  name.value = "";
-  email.value = "";
-  message.value = "";
-});
