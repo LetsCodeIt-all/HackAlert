@@ -1,22 +1,22 @@
-// server.js
 const express = require("express");
-// const fetch = require("node-fetch");
 const cors = require("cors");
+const path = require("path");
+
+// Optional fetch import for Node.js < 18
+const fetch = (...args) => import("node-fetch").then(({ default: fetch }) => fetch(...args));
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
+app.use(express.static(path.join(__dirname, "public"))); // Serve HTML/CSS/JS
 
 app.get("/check-email", async (req, res) => {
   const email = req.query.email;
-
   if (!email) return res.status(400).json({ error: "Email is required" });
 
   try {
-    const response = await fetch(
-      `https://leakcheck.net/api/public?check=${email}`
-    );
+    const response = await fetch(`https://leakcheck.net/api/public?check=${email}`);
     const data = await response.json();
     res.json(data);
   } catch (err) {
@@ -26,5 +26,5 @@ app.get("/check-email", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`✅ Server running on http://localhost:${PORT}`);
+  console.log(`✅ Server running on port ${PORT}`);
 });
