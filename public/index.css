@@ -109,6 +109,15 @@ header .Navbar .afterIcon div i {
   cursor: pointer;
   font-size: 15px;
 }
+marquee{
+  position: absolute;
+  top: 80px;
+  color: aquamarine;
+  z-index: 999;
+  background-color: grey;
+  
+  scroll-behavior: smooth;
+}
 /* main{border: 20px solid goldenrod;} */
 main .hero {
   display: flex;
