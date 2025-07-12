@@ -53,8 +53,13 @@ async function checkEmail(email) {
   emailResultDiv.innerText = "🔍 Checking, please wait...";
   emailResultDiv.style.color = "blue";
 
+  const baseURL =
+    location.hostname === "localhost"
+      ? "http://localhost:3000"
+      : "https://hackalert.onrender.com";
+
   try {
-    const res = await fetch(`http://localhost:3000/check-email?email=${email}`);
+    const res = await fetch(`${baseURL}/check-email?email=${encodeURIComponent(email)}`);
     const data = await res.json();
 
     if (data.success && data.found) {
@@ -62,23 +67,24 @@ async function checkEmail(email) {
       const sampleSources = data.sources.slice(0, 3).join(", ");
 
       emailResultDiv.innerText = `❌ Found in ${count} breaches`;
-      emailResultDiv.innerText += `\nExamples: ${sampleSources}...`;
+
       emailResultDiv.style.color = "red";
-    } else if (data.success === false && data.error === "Not found") {
+    } else if (data.error === "Not found") {
       emailResultDiv.innerText = "✅ No breach found";
       emailResultDiv.style.color = "green";
     } else {
-      emailResultDiv.innerText = "⚠️ Could not check email";
+      emailResultDiv.innerText = `⚠️ Error: ${data.error || "Could not check email"}`;
       emailResultDiv.style.color = "orange";
     }
   } catch (err) {
     console.error(err);
-    emailResultDiv.innerText = "❌ Error checking email";
+    emailResultDiv.innerText = "❌ Network or server error";
     emailResultDiv.style.color = "orange";
   }
 
   checkBreachBtn.disabled = false;
 }
+
 
 // =================== PASSWORD BREACH CHECK ===================
 const passInput = document.querySelector(".passwordInput");
