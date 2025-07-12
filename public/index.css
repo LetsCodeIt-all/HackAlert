@@ -132,10 +132,10 @@ main .hero .heroContent {
   flex-direction: column;
 }
 main .hero .Response {
-font-size: 25px;
+  font-size: 25px;
   width: auto;
   height: auto;
-  
+
   font-weight: bold;
 }
 main .hero .heroContent h1 {
@@ -231,8 +231,7 @@ main .hero .breaches > h1 {
   font-size: 35px;
 }
 main .hero .breaches .breach {
-  margin: 5px;
-  padding: 20px;
+  
   display: flex;
   flex-direction: column;
 }
@@ -245,8 +244,13 @@ main .hero .breaches .breach div > div {
   padding: 20px;
 }
 main .hero .breaches .breach > div {
-  margin: 10px;
+  
   width: 100%;
+  color: white;
+}
+main .hero .breaches .breach > div a {
+  color: white;
+  font-size: 12px;
 }
 footer {
   padding: 20px;
@@ -452,7 +456,6 @@ footer .Copyright h2:hover {
   main .hero .breaches > h1 {
     font-size: 30px;
   }
-
 }
 @media (max-width: 600px) {
   main .hero .heroContent h1 {
@@ -492,7 +495,7 @@ footer .Copyright h2:hover {
   main .hero .breaches > h1 {
     font-size: 25px;
   }
-   main .hero .breaches .breach > div {
+  main .hero .breaches .breach > div {
     width: fit-content;
   }
 }
@@ -549,8 +552,6 @@ footer .Copyright h2:hover {
     font-size: 20px;
   }
   main .hero .breaches {
-  
-  padding: 20px;
-}
-
+    padding: 20px;
+  }
 }
