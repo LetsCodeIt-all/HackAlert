@@ -456,7 +456,7 @@ footer .Copyright h2:hover {
 }
 @media (max-width: 600px) {
   main .hero .heroContent h1 {
-    font-size: 35px;
+    font-size: 30px;
   }
   main .hero .heroContent h2 {
     font-size: 10px;
@@ -518,7 +518,7 @@ footer .Copyright h2:hover {
     width: 100%;
   } */
   main .hero .breaches .breach > div {
-    width: fit-content;
+    width: auto;
   }
   main .hero .breaches .breach {
     width: fit-content;
@@ -548,4 +548,9 @@ footer .Copyright h2:hover {
   main .hero .breaches > h1 {
     font-size: 20px;
   }
+  main .hero .breaches {
+  
+  padding: 20px;
+}
+
 }
