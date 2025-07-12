@@ -492,6 +492,9 @@ footer .Copyright h2:hover {
   main .hero .breaches > h1 {
     font-size: 25px;
   }
+   main .hero .breaches .breach > div {
+    width: fit-content;
+  }
 }
 @media (max-width: 350px) {
   main .hero .heroContent h1 {
@@ -508,6 +511,7 @@ footer .Copyright h2:hover {
     width: 100%;
   }
   main .hero .breaches .breach {
+    width: 100%;
     padding: 0px;
   }
   /* main .hero .password input{
